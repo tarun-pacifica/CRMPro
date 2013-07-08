@@ -1,0 +1,13 @@
+<%= form_for @event do |f| %>
+
+  <%= f.label :start_date %>
+  <%= f.datetime_select :startdate%>
+  <br>
+  <%= f.label :notes %>
+  <%= f.text_field :notes %>
+  <br>
+  <%= f.label :event_type %>
+  <%= f.text_field :eventtype %>
+  <br>
+  <%= f.submit %>
+<% end %>

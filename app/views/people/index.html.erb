@@ -1,3 +1,10 @@
+<ul>
+<% @people.each do |person| %>
+<li><%= link_to(person.name, person) %></li>
+<% end %>
+</ul>
+
+
 GDAY PEOPLE
 
 <%= @people %>

@@ -1,4 +1,6 @@
-<h1>EventsController#show</h1>
-<p>Find me in app/views/events_controller/show.html.erb</p>
-
-<%= @events %>
+<h2><%= @event.eventtype %> <%= @event.startdate %> </h2>
+<p>Notes:<%= @event.notes %></p>
+<p>
+<%= link_to 'Edit', edit_event_path(@event) %>
+<%= link_to 'Delete', @event, :method => :delete %>
+</p>

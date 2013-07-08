@@ -9,11 +9,17 @@
 <body>
 WELCOME TO CRMPro
 
-<ul>
-<li><%= link_to 'People', people_path %></li>
-<li></li> <%= link_to 'Organisation', organisations_path %>
-<li></li> <%= link_to 'Events', events_path %>
-</ul>
+<nav>
+	<ul>
+		<li><%= link_to 'People', people_path %></li>
+		<li> <%= link_to 'Organisation', organisations_path %></li>
+		<li><%= link_to 'Events', events_path %></li> 
+		<li><%= link_to('Create Person', new_person_path) %></li>
+		<li><%= link_to('Create Event', new_event_path) %></li>
+		<li><%= link_to('Create Organisation', new_organisation_path) %></li>
+	</ul>
+</nav>
+
 <%= yield %>
 
 </body>

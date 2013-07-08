@@ -1,4 +1,6 @@
-<h1>EventsController#show</h1>
-<p>Find me in app/views/events_controller/show.html.erb</p>
-
-<%= @events %>
+<h2><%= @person.name %> <%= @person.surname %> </h2>
+<p>email<%= @person.email %></p>
+<p>
+<%= link_to 'Edit', edit_person_path(@person) %>
+<%= link_to 'Delete', @person, :method => :delete %>
+</p>

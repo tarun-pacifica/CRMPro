@@ -16,10 +16,12 @@
 #  country         :string(255)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  password_digest :string(255)
 #
 
 class Person < ActiveRecord::Base
-  attr_accessible :name, :id, :surname, :mobile, :email, :state, :country
-  belongs_to	:organisations
-  has_many	:events
+	has_secure_password
+  	attr_accessible :name, :id, :surname, :mobile, :email, :state, :country, :password, :password_confirmation
+  	belongs_to	:organisations
+  	has_many	:events
 end

@@ -1,3 +1,5 @@
 Crmpro::Application.routes.draw do
-  resources :people, :events, :organisations
+	root :to => 'home#index'
+
+  	resources :people, :events, :organisations
 end

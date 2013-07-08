@@ -14,5 +14,6 @@
 
 class Organisation < ActiveRecord::Base
   attr_accessible :name, :id, :phone, :state, :address
-  has_many	:persons
+  has_many	:people
+  has_many :events, :through => :person
 end
