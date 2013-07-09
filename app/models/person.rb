@@ -24,4 +24,10 @@ class Person < ActiveRecord::Base
   	attr_accessible :name, :id, :surname, :mobile, :email, :state, :country, :password, :password_confirmation
   	belongs_to	:organisations
   	has_many	:events
+
+  	validates :mobile, :presence => true
+  	validates :email, :uniqueness => true
+	validates :name, :length => {:minimum => 2 }
+	validates :surname, :uniqueness => true, :length => {:minimum => 2 }
 end
+

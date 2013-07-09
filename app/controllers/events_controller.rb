@@ -1,4 +1,12 @@
 class EventsController < ApplicationController
+  before_filter :authorize
+
+  def authorize
+    if @auth
+    else
+      redirect_to login_path
+    end
+  end
   # GET /organisations
   # GET /organisations.json
   def index

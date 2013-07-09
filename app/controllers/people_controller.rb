@@ -1,4 +1,13 @@
 class PeopleController < ApplicationController
+  #before_filter :authorize
+
+  #def authorize
+    #if @auth
+    #else
+      #redirect_to login_path
+    #end
+  #end
+
   # GET /people
   # GET /people.json
   def index
@@ -45,6 +54,7 @@ class PeopleController < ApplicationController
       if @person.save
         format.html { redirect_to @person, notice: 'Person was successfully created.' }
         format.json { render json: @person, status: :created, location: @person }
+        
       else
         format.html { render action: "new" }
         format.json { render json: @person.errors, status: :unprocessable_entity }
