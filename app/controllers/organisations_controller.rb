@@ -80,11 +80,13 @@ end
   # DELETE /organisations/1.json
   def destroy
     @organisation = Organisation.find(params[:id])
-    @organisation.destroy
 
-    respond_to do |format|
-      format.html { redirect_to organisations_url }
-      format.json { head :no_content }
+    if @auth.is_admin?
+      @organisation.destroy
+      redirect_to organisations_path
+    else
+      redirect_to organisations_path
     end
+
   end
 end

@@ -8,7 +8,7 @@ class SessionController < ApplicationController
 			session[:person_id] = person.id
 			redirect_to(root_path)
 		else
-			redirect_to(login_path)
+			redirect_to(login_path, :notice => 'Login Error')
 		end
 	end
 

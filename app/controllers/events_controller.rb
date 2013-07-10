@@ -80,12 +80,14 @@ class EventsController < ApplicationController
   # DELETE /people/1.json
   def destroy
     @event = Event.find(params[:id])
-    @event.destroy
 
-    respond_to do |format|
-      format.html { redirect_to people_url }
-      format.json { head :no_content }
+    if @auth.is_admin?
+      @event.destroy
+      redirect_to events_path
+    else
+      redirect_to events_path
     end
+    
   end
 end
 

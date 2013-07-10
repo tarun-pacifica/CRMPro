@@ -11,16 +11,7 @@ WELCOME TO CRMPro
 
 <nav>
   <ul>
-		  <li><%= @auth.try(:surname) %></li>
-      <li><%= link_to('Home', root_path) %></li>
-      <% if @auth.nil? %>
-        <li><%= link_to('Login', login_path) %></li>
-        <li><%= link_to('Create Account', new_person_path) %></li>
-      <% else %>
-        <li><%= link_to('Logout', login_path, :method => :delete, :confirm => 'Are you sure?') %></li>
-        <li><%= link_to('Create Event', new_event_path) %></li>
-		    <li><%= link_to('Create Organisation', new_organisation_path) %></li>
-      <% end %>
+		  <%== intellinav %>
 	</ul>
 </nav>
 
@@ -29,6 +20,8 @@ WELCOME TO CRMPro
   <li> <%= link_to 'Organisation', organisations_path %></li>
   <li><%= link_to 'Events', events_path %></li> 
 </nav>
+
+<p><%= notice %></p>
 
 <%= yield %>
 

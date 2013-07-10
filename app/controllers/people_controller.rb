@@ -1,12 +1,6 @@
 class PeopleController < ApplicationController
-  #before_filter :authorize
-
-  #def authorize
-    #if @auth
-    #else
-      #redirect_to login_path
-    #end
-  #end
+  before_filter :check_if_logged_in, :except => [:new, :create]
+  before_filter :check_if_admin, :only => [:index, :destroy]
 
   # GET /people
   # GET /people.json
@@ -89,4 +83,15 @@ class PeopleController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  private
+  def check_if_logged_in
+    redirect_to(login_path) if @auth.nil?
+  end
+
+  def check_if_admin
+    redirect_to(root_path) if @auth.nil? || !@auth.is_admin?
+  end
+
 end

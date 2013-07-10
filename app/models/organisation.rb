@@ -16,4 +16,5 @@ class Organisation < ActiveRecord::Base
   attr_accessible :name, :id, :phone, :state, :address
   has_many	:people
   has_many :events, :through => :person
+  #belongs_to :creator, :foreign_key => 'creator_id', :class_name => 'Person'
 end
