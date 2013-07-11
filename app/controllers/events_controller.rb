@@ -49,6 +49,31 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(params[:event])
 
+    cal = Google::Calendar.new(:username => 'crmprohorse@gmail.com',
+                           :password => '$$billsya',
+                           :app_name => 'crmprohorse.com-googlecalendar-integration')
+
+event = cal.create_event do |e|
+  e.title = params[:event][:eventtype]
+  e.start_time = @event.startdate #params[:event][:startdate].to_s
+  e.end_time = @event.startdate + 7000 #params[:event][:startdate].to_s  # seconds * min
+end
+
+# puts event
+
+# event = cal.find_or_create_event_by_id(event.id) do |e|
+#   e.title = params[:eventtype]
+#   e.end_time = params[:startdate] + (60 * 60 * 2) # seconds * min * hours
+# end
+
+# puts event
+
+# # All events
+# puts cal.events
+
+# # Query events
+# puts cal.find_events('my search string')
+
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
