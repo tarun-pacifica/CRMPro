@@ -1,3 +1,4 @@
+layout 'org_peo_cal'
 class EventsController < ApplicationController
   before_filter :authorize
 
@@ -112,8 +113,7 @@ end
     else
       redirect_to events_path
     end
-    
+
   end
 end
 
-  

@@ -1,3 +1,4 @@
+layout 'org_peo_cal'
 class OrganisationsController < ApplicationController
   before_filter :authorize
 

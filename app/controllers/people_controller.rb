@@ -1,3 +1,4 @@
+layout 'org_peo_cal'
 class PeopleController < ApplicationController
   before_filter :check_if_logged_in, :except => [:new, :create]
   before_filter :check_if_admin, :only => [:destroy]
@@ -55,7 +56,7 @@ class PeopleController < ApplicationController
       if @person.save
         format.html { redirect_to @person, notice: 'Person was successfully created.' }
         format.json { render json: @person, status: :created, location: @person }
-        
+
       else
         format.html { render action: "new" }
         format.json { render json: @person.errors, status: :unprocessable_entity }
