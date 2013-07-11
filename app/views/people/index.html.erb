@@ -1,6 +1,26 @@
 GDAY PEOPLE
 <ul>
 <% @people.each do |person| %>
-<li><%= link_to(person.name, person) %></li>
+<li><%= link_to(person.name, person) %> <%= link_to(person.surname, person) %></li>
 <% end %>
 </ul>
+
+<%= form_tag people_path, :method => :get do %>
+
+  <%= label_tag :name %>
+  <%= text_field_tag :searchname %>
+  <%= label_tag :surname %>
+   <%= text_field_tag :searchsurname %>
+  <br>
+  <%= submit_tag 'search' %>
+<% end %>
+
+
+
+
+</p>
+
+GDAY PEOPLE
+
+<%= @people %>
+

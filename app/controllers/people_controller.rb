@@ -1,11 +1,18 @@
 class PeopleController < ApplicationController
   before_filter :check_if_logged_in, :except => [:new, :create]
-  before_filter :check_if_admin, :only => [:index, :destroy]
+  before_filter :check_if_admin, :only => [:destroy]
 
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all
+
+    if params[:searchname] && params[:searchname].present? 
+      @people = Person.where(:name => params[:searchname])
+    elsif params[:searchsurname] && params[:searchsurname].present?
+      @people = Person.where(:surname => params[:searchsurname])
+    else
+      @people = Person.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -83,6 +90,7 @@ class PeopleController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
 
   private
