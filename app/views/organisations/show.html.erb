@@ -1,5 +1,13 @@
 <h2><%= @organisation.name %> <%= @organisation.address %> </h2>
-<p>Members:<%= @organisation.people %></p>
+<p>Members:
+
+<ul>
+      <% @organisation.people.each do |person| %>
+      <li><%= person.name %> <%= person.surname %></li>
+      <% end %>
+    </ul>
+  </p>
+
 <button><p><%= link_to 'Add new person to organisation', add_person_organisation_path(@organisation) %></p></button>
 </p>
 <button><%= link_to 'Edit', edit_organisation_path(@organisation) %></button>

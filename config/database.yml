@@ -3,7 +3,6 @@ development:
   encoding: unicode
   database: crmpro_development
   pool: 5
-  host: localhost
-  username: MOOKBOOK13
+  username: hui
   password: password
 
