@@ -1,4 +1,3 @@
-layout 'org_peo_cal'
 class PeopleController < ApplicationController
   before_filter :check_if_logged_in, :except => [:new, :create]
   before_filter :check_if_admin, :only => [:destroy]
@@ -9,10 +8,10 @@ class PeopleController < ApplicationController
 
     if params[:searchname] && params[:searchname].present? 
       @people = Person.where(:name => params[:searchname])
-    elsif params[:searchsurname] && params[:searchsurname].present?
+    else params[:searchsurname] && params[:searchsurname].present?
       @people = Person.where(:surname => params[:searchsurname])
-    else
-      @people = Person.all
+    # else
+    #   @people = Person.all
     end
 
     respond_to do |format|

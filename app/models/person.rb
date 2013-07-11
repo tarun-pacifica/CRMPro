@@ -23,8 +23,8 @@
 class Person < ActiveRecord::Base
 	has_secure_password
   	attr_accessible :name, :id, :surname, :mobile, :email, :state, :country, :password, :password_confirmation
-  	belongs_to	:organisations
-  	has_and_belongs_to_many	:events
+  	belongs_to	:organisation
+  	has_many	:events
 
   	validates :mobile, :presence => true
   	validates :email, :uniqueness => true

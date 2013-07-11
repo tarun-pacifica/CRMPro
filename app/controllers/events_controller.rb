@@ -1,4 +1,3 @@
-layout 'org_peo_cal'
 class EventsController < ApplicationController
   before_filter :authorize
 
@@ -49,6 +48,7 @@ class EventsController < ApplicationController
   # POST /people.json
   def create
     @event = Event.new(params[:event])
+    @event.person = @auth
 
     cal = Google::Calendar.new(:username => 'crmprohorse@gmail.com',
                            :password => '$$billsya',

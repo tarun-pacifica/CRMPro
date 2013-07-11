@@ -1,0 +1,5 @@
+<%= form_tag [:create_person, @organisation] do %>
+
+	<%= select_tag :person, options_from_collection_for_select(Person.all,:id, :name) %>
+	<%= submit_tag 'add' %>
+<% end %>

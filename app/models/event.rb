@@ -14,6 +14,7 @@
 
 class Event < ActiveRecord::Base
   attr_accessible :startdate, :notes, :eventtype, :enddate
-  has_and_belongs_to_many	:people
-  belongs_to :organisations
+  belongs_to	:person
+  belongs_to :organisation
+
 end

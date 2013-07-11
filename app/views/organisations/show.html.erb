@@ -1,6 +1,7 @@
 <h2><%= @organisation.name %> <%= @organisation.address %> </h2>
 <p>PH:<%= @organisation.phone %></p>
-<p>
+<p>Members:<%= @organisation.people %></p>
+<p><%= link_to 'Add person to organisation', add_person_organisation_path(@organisation) %></p>
 <%= link_to 'Edit', edit_organisation_path(@organisation) %>
 <%= link_to 'Delete', @organisation, :method => :delete %>
 </p>

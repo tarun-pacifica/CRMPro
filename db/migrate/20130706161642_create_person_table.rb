@@ -11,7 +11,7 @@ def change
     o.string		:notes
     o.string		:type
     o.string		:status
-    o.string        :organisation_id
+    o.integer        :organisation_id
     o.string    :country
     o.timestamps  
 		end

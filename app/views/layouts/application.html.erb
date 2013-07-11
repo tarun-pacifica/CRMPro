@@ -17,14 +17,14 @@
         <li class="link"><%= link_to 'Create User', home_path %></li>
       </ul>
       <ul class="nav pull-right">
-          <li class="link"><%= link_to 'People',  home_path %></li>
-          <li class="link"><%= link_to 'Calendar',home_path %></li>
-          <li class="link"><%= link_to 'Organisations',home_path %></li>
+          <li class="link"><%= link_to 'People',  people_path %></li>
+          <li class="link"><%= link_to 'Calendar', events_path %></li>
+          <li class="link"><%= link_to 'Organisations',organisations_path %></li>
       </ul>
     </div>
   </div>
 
-  <nav><%#== intellinav %></nav>
+  <nav><%== intellinav %></nav>
 
   <div class="row-fluid">
     <div class="span12" style="background: red;"><p><%= notice %></p></div>

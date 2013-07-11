@@ -1,4 +1,3 @@
-layout 'org_peo_cal'
 class OrganisationsController < ApplicationController
   before_filter :authorize
 
@@ -89,5 +88,16 @@ end
       redirect_to organisations_path
     end
 
+  end
+
+  def add_person
+    @organisation = Organisation.find(params[:id])
+  end
+
+  def create_person
+    @organisation = Organisation.find(params[:id])
+    @organisation.people << Person.find(params[:person])
+    @organisation.save
+    redirect_to @organisation
   end
 end
