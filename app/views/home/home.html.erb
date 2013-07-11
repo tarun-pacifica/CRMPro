@@ -1,14 +1,33 @@
-
-
-
-
+<div class="container-fluid form_a">
   <div class="row-fluid">
-    <div class="span12" style="background: red;">
-
-      <div class = "org_circle circ" ><a href="/organisations">Organisation</a></div>
-      <div class = "cal_circle circ" ><a href="/calendar">Calendar</a></div>
-      <div class = "people_circle circ"><a href="/people">People</a></div>
-
-    </div>
+  <div class="span6">
+    <h1>FORM VIEWER</h1>
+    (CREATE RUBY METHOD with CURRENT PAGE NAME)
+    <%= @person=Person.new %>
+    <table class="table">
+      <tr>
+        <td><%= @person.name %><td><%= @person.surname%>
+      </tr>
+      <tr>
+        <td><%= @person.address %><td><td><%= @person.state%></td>
+      </tr>
+      <tr>
+        <td><%= @person.email%><td><td><%= @person.mobile %><td>
+      </tr>
+      <tr>
+        <td><%= @person.type %><td><td><%= @person.status %><td>
+      </tr>
+    </table>
   </div>
-
+<div class="container-fluid form_b">
+  <div class="row-fluid">
+    <div class="span6">
+      <h1>CALENDAR</h1>
+    </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <h1>EVENT NOTES</h1>
+      <table class="table">
+      <tr><td>sdfasdf<td><td>sdfasdf<td><td>sdfasdf<td></tr>
+  </div>
+</div>

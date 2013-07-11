@@ -1,14 +1,12 @@
-
-
 .people_circle {
   border-radius: 50%;
   display: inline-block;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   background-color: #F06BDF;
   font-family: LATO; sans-serif;
   font-size: 35px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   vertical-align: center;
   line-height: 50px;
@@ -17,12 +15,12 @@
 .org_circle {
   border-radius: 50%;
   display: inline-block;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   background-color: #570D4E;
   font-family: LATO; sans-serif;
   font-size: 35px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   line-height: 50px;
   cursor: pointer;
@@ -30,12 +28,12 @@
 .cal_circle {
   border-radius: 50%;
   display: inline-block;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   background-color: #9467BD;
   font-family: LATO; sans-serif;
   font-size: 35px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   line-height: 50px;
   cursor: pointer;
@@ -54,7 +52,6 @@
 }
 
 body {
-  background-color: green;
 }
 
 /*.row {
@@ -98,3 +95,27 @@ margin-right: 5%;
 }
 */
 
+.calendar {
+margin: 20px;
+float: right;
+}
+
+.event_notes {
+float: right;
+}
+
+.form_viewer {
+margin-bottom: 50px;
+}
+.form_b {
+  display: block;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.form_a {
+  display: block;
+  margin-top: 10px;
+  margin-left: 50px;
+
+}
