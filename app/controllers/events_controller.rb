@@ -56,7 +56,7 @@ class EventsController < ApplicationController
 event = cal.create_event do |e|
   e.title = params[:event][:eventtype]
   e.start_time = @event.startdate #params[:event][:startdate].to_s
-  e.end_time = @event.startdate + 7000 #params[:event][:startdate].to_s  # seconds * min
+  e.end_time = @event.enddate #params[:event][:startdate].to_s  # seconds * min
 end
 
 # puts event
