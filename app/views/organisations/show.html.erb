@@ -1,30 +1,22 @@
 <h2><%= @organisation.name %> <%= @organisation.address %> </h2>
-<p>PH:<%= @organisation.phone %></p>
 <p>Members:<%= @organisation.people %></p>
-<p><%= link_to 'Add person to organisation', add_person_organisation_path(@organisation) %></p>
-<%= link_to 'Edit', edit_organisation_path(@organisation) %>
-<%= link_to 'Delete', @organisation, :method => :delete %>
+<button><p><%= link_to 'Add new person to organisation', add_person_organisation_path(@organisation) %></p></button>
 </p>
-
-<%= link_to 'Edit', edit_organisation_path(@organisation) %>
-<%= link_to 'Delete', @organisation, :method => :delete %>
+<button><%= link_to 'Edit', edit_organisation_path(@organisation) %></button>
+<button><%= link_to 'Delete', @organisation, :method => :delete %></button>
 </p>
 
 <div class="container-fluid form_a">
   <div class="row-fluid">
   <div class="span6">
-    <h1><%= @organisation.name %> <%= @organisation.surname %> </h1>
+    <h1><%= @organisation.name %></h1>
     <table class="table">
       <tr>
         <td>Name: <%= @organisation.name %></tr>
       <tr>
         <td>Address: <%= @organisation.address %><td><td> State: <%= @organisation.state%></td>
       </tr>
-      <tr>
-        <td>Email: <%= @organisation.email%><td><td>Phone: <%= @organisation.phone %><td>
-      </tr>
-      <tr>
-        <td>Status: <%= @organisation.status %><td>
+      <tr><td>Phone: <%= @organisation.phone %><td>
       </tr>
       <tr>
       </tr>
