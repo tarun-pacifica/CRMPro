@@ -6,29 +6,27 @@
 <%= link_to 'Delete', @organisation, :method => :delete %>
 </p>
 
-<%= link_to 'Edit', edit_person_path(@person) %>
-<%= link_to 'Delete', @person, :method => :delete %>
+<%= link_to 'Edit', edit_organisation_path(@organisation) %>
+<%= link_to 'Delete', @organisation, :method => :delete %>
 </p>
 
 <div class="container-fluid form_a">
   <div class="row-fluid">
   <div class="span6">
-    <h1><%= @person.name %> <%= @person.surname %> </h1>
+    <h1><%= @organisation.name %> <%= @organisation.surname %> </h1>
     <table class="table">
       <tr>
-        <td>First Name: <%= @person.name %><td>Surname: <%= @person.surname%>
+        <td>Name: <%= @organisation.name %></tr>
+      <tr>
+        <td>Address: <%= @organisation.address %><td><td> State: <%= @organisation.state%></td>
       </tr>
       <tr>
-        <td>Address: <%= @person.address %><td><td> State: <%= @person.state%></td>
+        <td>Email: <%= @organisation.email%><td><td>Phone: <%= @organisation.phone %><td>
       </tr>
       <tr>
-        <td>Email: <%= @person.email%><td><td>Mobile: <%= @person.mobile %><td>
+        <td>Status: <%= @organisation.status %><td>
       </tr>
       <tr>
-        <td>Type: <%= @person.type %><td><td>Status: <%= @person.status %><td>
-      </tr>
-      <tr>
-        <td><td><td><td>
       </tr>
     </table>
   </div>

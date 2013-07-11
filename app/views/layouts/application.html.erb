@@ -12,26 +12,19 @@
     <div class="navbar-inner">
       <ul class="nav">
         <li class="link"><%= link_to 'Home',  root_path %></li>
-        <li class="link"><%= link_to 'Register', new_person_path %></li>
-        <li class="link"><%= link_to 'Sign In', login_path %></li>
+        <li><%== intellinav %></li>
+        <li></ul>
       </ul>
+
       <ul class="nav pull-right">
           <li class="link"><%= link_to 'People',  people_path %></li>
           <li>
-          <a href="https://www.google.com/calendar/embed?src=qetsbt61e7bjh7iagu50tvia1c%40group.calendar.google.com&ctz=Australia/Sydney" target="_blank">Calendar</a></li>
+          <a href="https://www.google.com/calendar/embed?src=qetsbt61e7bjh7iagu50tvia1c%40group.calendar.google.com&ctz=Australia/Sydney" target="google">Calendar</a></li>
           <li class="link"><%= link_to 'Organisations',organisations_path %></li>
       </ul>
     </div>
   </div>
-  <nav><%== intellinav %></nav>
-
-  <!--<div class="row-fluid">
-    <div class="span12" style="background: red;color: white;"><p><%= notice %></p></div>
-  </div>--!>
-  <nav><%#== intellinav %></nav>
-  <%= yield %>
-</div> <!-- container -->
-<footer>
-</footer>
+ <%= yield %>
+</div>
 </body>
 </html>

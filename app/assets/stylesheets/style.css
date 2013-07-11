@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 .org_circle {
-  margin-left: 100px;
+  margin-left: 10px;
   border-radius: 50%;
   display: inline-block;
   width: 330px;
@@ -56,16 +56,19 @@
 }
 
 body {
-}
-
-/*.row {
-background-color: #570D4E;
+background-color: #10A397;
 width: 100%;
 color: white;
 text-decoration: none;
+opacity: 0.8;
 }
 */
 a.image-link:focus { outline: 0; }
+
+html:visited {
+text-decoration: none;
+color: white;
+}
 
 a:hover, a:visited, a:active {
   background-color: transparent;
@@ -102,6 +105,7 @@ margin-right: 5%;
 .calendar {
 margin: 20px;
 float: right;
+width: 200px;
 }
 
 .event_notes {
@@ -121,6 +125,19 @@ margin-bottom: 50px;
   display: block;
   margin-top: 10px;
   margin-left: 50px;
-  border: 1px solid grey;
 
+}
+.span12 {
+padding-top: 150px;
+text-align: center;
+margin-left: -900px;
+}
+
+.google {
+width: 100px;
+height: 100px;
+}
+
+#peeps {
+  font-variant: bold;
 }
