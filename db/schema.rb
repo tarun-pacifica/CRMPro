@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20130711044648) do
     t.string   "notes"
     t.string   "type"
     t.string   "status"
-    t.integer  "organisation_id"
+    t.string   "organisation_id"
     t.string   "country"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false

@@ -50,9 +50,9 @@ class EventsController < ApplicationController
     @event = Event.new(params[:event])
     @event.person = @auth
 
-    cal = Google::Calendar.new(:username => 'crmprohorse@gmail.com',
-                           :password => '$$billsya',
-                           :app_name => 'crmprohorse.com-googlecalendar-integration')
+    cal = Google::Calendar.new(:username => 'zoilism@gmail.com',
+                           :password => 'Darren12',
+                           :app_name => 'zoilism.com-googlecalendar-integration')
 
 event = cal.create_event do |e|
   e.title = params[:event][:eventtype]

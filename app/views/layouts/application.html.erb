@@ -12,30 +12,26 @@
     <div class="navbar-inner">
       <ul class="nav">
         <li class="link"><%= link_to 'Home',  root_path %></li>
-        <li class="link"><%= link_to 'Create User', home_path %></li>
+        <li class="link"><%= link_to 'Register', new_person_path %></li>
+        <li class="link"><%= link_to 'Sign In', login_path %></li>
       </ul>
       <ul class="nav pull-right">
           <li class="link"><%= link_to 'People',  people_path %></li>
-          <li class="link"><%= link_to 'Calendar', events_path %></li>
+          <li>
+          <a href="https://www.google.com/calendar/embed?src=qetsbt61e7bjh7iagu50tvia1c%40group.calendar.google.com&ctz=Australia/Sydney" target="_blank">Calendar</a></li>
           <li class="link"><%= link_to 'Organisations',organisations_path %></li>
       </ul>
     </div>
   </div>
-<<<<<<< Updated upstream
-
   <nav><%== intellinav %></nav>
 
-  <div class="row-fluid">
-    <div class="span12" style="background: red;"><p><%= notice %></p></div>
-  </div>
-
-=======
+  <!--<div class="row-fluid">
+    <div class="span12" style="background: red;color: white;"><p><%= notice %></p></div>
+  </div>--!>
   <nav><%#== intellinav %></nav>
->>>>>>> Stashed changes
   <%= yield %>
 </div> <!-- container -->
 <footer>
-
 </footer>
 </body>
 </html>

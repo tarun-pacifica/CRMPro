@@ -1,3 +1,20 @@
+<div>
+  <h3>Search for Organisation</h3>
+    <ul>
+      <% @organisations.each do |organisations| %>
+      <li><%= link_to(organisations.name, organisations) %></li>
+      <% end %>
+    </ul>
+      <%= form_tag organisations_path, :method => :get do %>
+      <%= label_tag :name %>
+      <%= text_field_tag :searchname %>
+
+        <br>
+      <%= submit_tag 'search' %>
+      <% end %>
+    </p>
+</div>
+<!--
 <ul>
 <% @organisations.each do |organisation| %>
 <li><%= link_to(organisation.name, organisation) %></li>
@@ -5,7 +22,3 @@
 </ul>
 
 <ul>
-GDAY ORGANISATIONS
-
-<%= @organisations %>
-</ul>

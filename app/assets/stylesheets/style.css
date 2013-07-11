@@ -1,8 +1,9 @@
 .people_circle {
+  margin-left: 10px;
   border-radius: 50%;
   display: inline-block;
-  width: 400px;
-  height: 400px;
+  width: 330px;
+  height: 330px;
   background-color: #F06BDF;
   font-family: LATO; sans-serif;
   font-size: 35px;
@@ -13,10 +14,11 @@
   cursor: pointer;
 }
 .org_circle {
+  margin-left: 100px;
   border-radius: 50%;
   display: inline-block;
-  width: 400px;
-  height: 400px;
+  width: 330px;
+  height: 330px;
   background-color: #570D4E;
   font-family: LATO; sans-serif;
   font-size: 35px;
@@ -26,10 +28,11 @@
   cursor: pointer;
 }
 .cal_circle {
+  margin-left: 10px;
   border-radius: 50%;
   display: inline-block;
-  width: 400px;
-  height: 400px;
+  width: 330px;
+  height: 330px;
   background-color: #9467BD;
   font-family: LATO; sans-serif;
   font-size: 35px;
@@ -49,6 +52,7 @@
   color: white;
   outline-color: white;
   vertical-align: center;
+  margin-left: 10px;
 }
 
 body {
@@ -117,5 +121,6 @@ margin-bottom: 50px;
   display: block;
   margin-top: 10px;
   margin-left: 50px;
+  border: 1px solid grey;
 
 }
