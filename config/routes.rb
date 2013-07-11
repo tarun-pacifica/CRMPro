@@ -1,12 +1,12 @@
 Crmpro::Application.routes.draw do
-	root :to => 'home#index'
+  root :to => 'home#landing'
+  get '/home' => 'home#home'
 
-  	resources :people, :events, :organisations
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
 
-	get '/login' => 'session#new'
-  	post '/login' => 'session#create'
-  	delete '/login' => 'session#destroy'
- 
+  resources :people, :events, :organisations
 end
 
 
