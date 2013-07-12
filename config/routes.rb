@@ -7,12 +7,19 @@ Crmpro::Application.routes.draw do
   delete '/login' => 'session#destroy'
 
   get '/people' => 'people#index'
-  resources :people, :events
+  resources :events
   resources :organisations do
   		member do
   			get :add_person
   			post :create_person
   		end
+  end
+
+  resources :people do
+      member do
+        get :add_event
+        post :create_event
+      end
   end
 
 end

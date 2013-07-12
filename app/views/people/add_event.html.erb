@@ -1,0 +1,5 @@
+<%= form_tag [:create_event, @person] do %>
+
+	<%= select_tag :event, options_from_collection_for_select(Event.all,:id, :eventtype) %>
+	<%= submit_tag 'add' %>
+<% end %>

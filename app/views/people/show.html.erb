@@ -20,6 +20,10 @@
       </p>
     </table>
   </div>
+
+<button><p><%= link_to 'Add new event to person', add_event_person_path(@person) %></p></button>
+
+
 <div class="container-fluid form_b">
   <div class="row-fluid">
     <div class="span6">
@@ -30,7 +34,13 @@
     <div class="span6">
       <h1>EVENT NOTES</h1>
       <table class="table">
-      <tr><td><%=@person.id%><td><td>  <td><td>   <td></tr>
+      <tr><td>
+    <ul>
+      <% @person.events.each do |event| %>
+      <li><%= event.eventtype %> <%= event.notes %> <%= event.startdate %></li>
+      <% end %>
+    </ul>
+  <td><td>  <td><td>   <td></tr>
   </div>
 </div>
 

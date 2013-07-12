@@ -91,6 +91,17 @@ class PeopleController < ApplicationController
     end
   end
 
+  def add_event
+    @person = Person.find(params[:id])
+  end
+
+  def create_event
+    @person = Person.find(params[:id])
+    @person.events << Event.find(params[:event])
+    @person.save
+    redirect_to @person
+  end
+
 
 
   private
