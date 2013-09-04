@@ -9,7 +9,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'pg'
 gem 'haml'
 gem 'google_calendar'
-
+gem 'newrelic_rpm'
 
 
 # Gems used only for assets and not required

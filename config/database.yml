@@ -3,7 +3,22 @@ development:
   encoding: unicode
   database: crmpro_development
   pool: 5
-  username: MOOKBOOK13
-  host: localhost
+  username: hui
   password: password
 
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: crmpro_test
+  pool: 5
+  host: localhost
+  username: hui
+  password: password
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: crmpro_production
+  pool: 5
+  username: hui
+  password: password
